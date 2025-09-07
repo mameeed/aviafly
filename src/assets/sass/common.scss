@@ -1,0 +1,46 @@
+// core styles
+@import "@/assets/sass/core/variables.scss";
+@import "@/assets/sass/core/normalizer.scss";
+@import "@/assets/sass/core/keyframes.scss";
+@import "@/assets/sass/core/mixins.scss";
+
+// components' styles
+@import "@/assets/sass/components/compButton.scss";
+// @import "@/assets/sass/components/compHeader.scss";
+// @import "@/assets/sass/components/compFooter.scss";
+// @import "@/assets/sass/components/compNewsCard.scss";
+@import "@/assets/sass/components/compMobilePopup.scss";
+@import "@/assets/sass/components/compIntroSection.scss";
+@import "@/assets/sass/components/compConstruction.scss";
+@import "@/assets/sass/components/compLoader.scss";
+@import "@/assets/sass/components/compModal.scss";
+@import "@/assets/sass/components/compRadialcircle.scss";
+@import "@/assets/sass/components/compLeaveapp.scss";
+@import "@/assets/sass/components/copmPopcontact.scss";
+@import "@/assets/sass/components/copmToast.scss";
+
+// sectionss styles
+// @import "@/assets/sass/sections/sectionIntro.scss";
+// @import "@/assets/sass/sections/sectionNews.scss";
+// @import "@/assets/sass/sections/sectionSubintro.scss";
+// @import "@/assets/sass/sections/sectionComments.scss";
+// @import "@/assets/sass/sections/sectionTours.scss";
+// @import "@/assets/sass/sections/sectionContact.scss";
+// @import "@/assets/sass/sections/sectionGallery.scss";
+// @import "@/assets/sass/sections/sectionTeamCEO.scss";
+// @import "@/assets/sass/sections/sectionTeamStaff.scss";
+// @import "@/assets/sass/sections/sectionTeamContact.scss";
+// @import "@/assets/sass/sections/sectionReviewsRegular.scss";
+// @import "@/assets/sass/sections/sectionReviewsCorporate.scss";
+// @import "@/assets/sass/sections/sectionHistoryMain.scss";
+// @import "@/assets/sass/sections/sectionIndMain.scss";
+// @import "@/assets/sass/sections/sectionIndList.scss";
+// @import "@/assets/sass/sections/sectionVisaStats.scss";
+// @import "@/assets/sass/sections/sectionVisaGet.scss";
+// @import "@/assets/sass/sections/sectionCorpRevs.scss";
+// @import "@/assets/sass/sections/sectionCorpWhywe.scss";
+// @import "@/assets/sass/sections/sectionContactMain.scss";
+// @import "@/assets/sass/sections/sectionContactForm.scss";
+
+// pages styles
+@import "@/assets/sass/pages/page-news.scss";

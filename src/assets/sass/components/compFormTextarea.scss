@@ -1,0 +1,37 @@
+.tp-textarea {
+    display: block;
+    width: 100%;
+    padding: 16px 25px;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+    color: #555555;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    resize: vertical;
+    min-height: 220px;
+    max-height: 400px;
+
+    &.tp-error {
+        border-color: #f53737;
+        background: #fff;
+
+        &::placeholder {
+            color: #f53737;
+        }
+    }
+
+    &.tp-success {
+        border-color: #52d834;
+        background: #fff;
+
+        &::placeholder {
+            color: #52d834;
+        }
+    }
+
+    &:focus {
+        background: #fff;
+    }
+}

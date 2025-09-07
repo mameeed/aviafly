@@ -1,0 +1,43 @@
+.tp-input {
+    display: inline-block;
+    width: 100%;
+    padding: 16px 25px;
+    line-height: 1.5;
+    height: 65px;
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+    color: #555555;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+    &.tp-error {
+        border-color: #f53737;
+        background: #fff;
+
+        &::placeholder {
+            color: #f53737;
+        }
+    }
+
+    &.tp-success {
+        border-color: #52d834;
+        background: #fff;
+
+        &::placeholder {
+            color: #52d834;
+        }
+    }
+
+    &:focus {
+        background: #fff;
+    }
+}
+
+@media (max-width: 576px) {
+    .tp-input {
+        padding: 10px 20px;
+        height: 50px;
+        font-size: 14px;
+    }
+}

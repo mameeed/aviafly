@@ -1,0 +1,79 @@
+.tp-corppage-revs {
+    padding: 50px 0;
+    position: relative;
+
+    &__content {
+        display: flex;
+        gap: 50px;
+    }
+
+    &__titling {
+        width: 25%;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 5;
+
+        &-title {
+            font-size: 24px;
+            color: #333;
+        }
+
+        &-desc {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.4;
+            margin: 10px 0 0 0;
+        }
+    }
+
+    &__swiper {
+        width: calc(1200px - 25%);
+        flex-grow: 1;
+        overflow: visible !important;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__list {
+        .tp-revcard--corp {
+            background: #fff;
+            box-shadow: 0 10px 50px -20px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+            width: 300px;
+            overflow: hidden;
+
+            &__image {
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                aspect-ratio: 3 / 4;
+                transition: 0.3s;
+                // filter: brightness(0.8);
+                cursor: pointer;
+
+                &:hover {
+                    filter: revert;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    &::before {
+        position: absolute;
+        z-index: 3;
+        content: "";
+        width: 50vw;
+        background: #fff;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-260px);
+    }
+}

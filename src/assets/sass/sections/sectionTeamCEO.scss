@@ -1,0 +1,398 @@
+.tp-teampage-ceo {
+    padding: 50px 0;
+    position: relative;
+    height: 750px;
+    transition: 0.5s;
+
+    &__content {
+        height: 100%;
+    }
+
+    &__image {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 100%;
+        transition: 1.2s;
+        object-fit: cover;
+        object-position: right top;
+        will-change: transform;
+
+        &.tp-hide {
+            height: 150%;
+        }
+    }
+
+    &__info {
+        // background: lightcoral;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__main {
+        // background: lightgoldenrodyellow;
+        width: 25%;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        transition: 0.6s;
+
+        &-name {
+            font-size: 26px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        &-job {
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 1.4;
+            color: #fff;
+        }
+
+        &-sign {
+            width: 200px;
+            height: 90px;
+            object-fit: contain;
+            object-position: left;
+            filter: invert(1);
+        }
+
+        &.tp-hide {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+    }
+
+    &__bio {
+        width: 25%;
+        flex-shrink: 0;
+        transition: 0.6s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        // background: lightgreen;
+
+        &-title {
+            font-size: 26px;
+            font-weight: 600;
+            color: #fff;
+            text-align: right;
+            align-self: flex-end;
+        }
+
+        &-text {
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 1.4;
+            color: #fff;
+            text-align: right;
+        }
+
+        &-btn {
+            margin: 0 0 0 auto;
+        }
+
+        &.tp-hide {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+    }
+
+    &__more {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        transition: 0.6s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        width: 40%;
+        text-align: right;
+        height: calc(100%);
+        overflow: auto;
+
+        &-txt {
+            font-size: 14px;
+            color: #fff;
+            font-weight: 200;
+        }
+
+        &-socials {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        &-social {
+            filter: invert(1);
+            transition: 0.3s;
+            opacity: 0.8;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
+
+    &.tp-active {
+        .tp-teampage-ceo {
+            &__more {
+                opacity: 1;
+                visibility: visible;
+                position: relative;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .tp-teampage-ceo {
+        &__image {
+            object-position: center center;
+
+            &.tp-hide {
+                object-position: 80% center;
+            }
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .tp-teampage-ceo {
+        &__more {
+            width: 50%;
+        }
+
+        &__image {
+            &.tp-hide {
+                object-position: 70% center;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .tp-teampage-ceo {
+        &__main {
+            width: 30%;
+
+            &-name {
+                font-size: 18px;
+            }
+
+            &-job {
+                font-size: 14px;
+            }
+        }
+
+        &__bio {
+            width: 30%;
+
+            &-title {
+                font-size: 18px;
+            }
+
+            &-text {
+                font-size: 14px;
+            }
+        }
+
+        &__more {
+            width: 738px;
+            position: absolute !important;
+            right: 50%;
+            transform: translateX(50%);
+            padding: 0 0 0 30%;
+
+            &-txt {
+                font-size: 13px;
+            }
+        }
+
+        &__image {
+            &.tp-hide {
+                object-position: 65% center;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .tp-teampage-ceo {
+        height: 800px;
+
+        &__info {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        &__main {
+            width: 50%;
+        }
+
+        &__bio {
+            width: 50%;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+
+            &-title {
+                font-size: 18px;
+                text-align: left;
+                align-self: unset;
+            }
+
+            &-text {
+                font-size: 14px;
+                text-align: left;
+            }
+
+            &-btn {
+                margin: 0;
+            }
+        }
+
+        &__image {
+            object-position: 70% center;
+
+            &.tp-hide {
+                height: 120%;
+                object-position: 65% center;
+            }
+        }
+
+        &__more {
+            width: 546px;
+            height: calc(100% - 100px);
+
+            &-txt {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .tp-teampage-ceo {
+        height: auto;
+
+        &__info {
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 50vh 0 0 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__main {
+            gap: 10px;
+            padding: 0 20px 0 0;
+
+            &-name {
+                font-size: 16px;
+            }
+
+            &-job {
+                font-size: 11px;
+            }
+
+            &-sign {
+                width: 100px;
+                height: auto;
+            }
+        }
+
+        &__bio {
+            gap: 10px;
+            align-items: flex-end;
+
+            &-title {
+                font-size: 16px;
+                text-align: right;
+            }
+
+            &-text {
+                font-size: 11px;
+                text-align: right;
+            }
+        }
+
+        &__image {
+            object-position: center bottom;
+
+            &.tp-hide {
+                object-position: center center;
+            }
+        }
+
+        &__more {
+            bottom: -50px;
+            left: -15px;
+            right: -15px;
+            height: auto;
+            padding: 0;
+            transform: none;
+            gap: 5px;
+            height: 250px;
+            overflow: auto;
+            justify-content: flex-start;
+            overflow: auto;
+            padding: 0 15px 30px 15px;
+            width: auto;
+
+            &-txt {
+                font-size: 12px;
+            }
+
+            &::after {
+                position: absolute;
+                height: 250px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgb(0, 0, 0);
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 15%, rgba(255, 255, 255, 0) 59%);
+                content: "";
+                transition: 0.3s;
+            }
+
+            &.scrolled {
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &__content {
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: rgb(0, 0, 0);
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.68) 15%, rgba(255, 255, 255, 0) 59%);
+            }
+        }
+    }
+}

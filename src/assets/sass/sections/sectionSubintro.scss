@@ -1,0 +1,242 @@
+.tp-subintro {
+    padding: 100px 0 0 0;
+    position: relative;
+
+    &__content {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__image {
+        width: 50%;
+        background: #ffffff;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 0;
+
+        &-file {
+            margin: 0 -80px 0 0;
+        }
+    }
+
+    &__desc {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font: 700 40px / 1.1 "Montserrat";
+        color: #222;
+    }
+
+    &__desctxt {
+        font: 15px / 1.6 "Montserrat";
+        color: #222;
+    }
+
+    &__signature {
+        &-image {
+            width: 220px;
+            object-fit: contain;
+            margin: 0 0 5px 0;
+        }
+
+        &-founder {
+            font: 14px / 1.6 "Montserrat";
+            color: #222;
+            opacity: 0.6;
+            padding: 0 5px;
+        }
+    }
+
+    &__cons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 20px 0;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &::before {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: url("@/assets/icons/icon-arrow-point.svg") no-repeat center center/contain;
+                content: "";
+            }
+        }
+    }
+
+    &__advantages {
+        display: flex;
+        gap: 50px;
+        padding: 100px 0;
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: url("@/assets/images/static/bg-dots.png") no-repeat center top;
+            background-size: 100% auto;
+            opacity: 0.6;
+            height: 320px;
+        }
+    }
+
+    &__advantage {
+        position: relative;
+        padding: 0 0 0 85px;
+
+        &-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 65px;
+            height: 65px;
+            display: flex;
+            object-fit: contain;
+        }
+
+        &-title {
+            font: 700 22px / 1.2 Montserrat;
+            color: #222;
+            margin: 0 0 20px 0;
+
+            &::after {
+                display: block;
+                width: 60px;
+                content: "";
+                background: url("@/assets/images/static/img-decore.png") no-repeat center center/contain;
+                height: 4px;
+                margin: 20px 0 0 0;
+                filter: grayscale(1);
+                opacity: 0.7;
+            }
+        }
+
+        &-desc {
+            font: 15px / 1.6 "Montserrat";
+            color: #222;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .tp-subintro__image-file {
+        margin: 0 -200px 0 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .tp-subintro {
+        padding: 70px 0 0 0;
+
+        &__content {
+            flex-direction: column-reverse;
+        }
+
+        &__desc {
+            width: 100%;
+        }
+
+        &__image {
+            width: 100%;
+
+            &-file {
+                margin: 0 auto;
+            }
+        }
+
+        &__advantages {
+            padding: 30px 0 0 0;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .tp-subintro__image-file {
+        margin: 0 -150px 0 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .tp-subintro {
+        padding: 50px 0;
+
+        &__title {
+            margin-bottom: 1px;
+            font: 700 24px / 1.1 "Montserrat";
+        }
+
+        &__desctxt {
+            font: 12px / 1.6 "Montserrat";
+            color: #222;
+        }
+
+        &__signature {
+            &-founder {
+                font: 12px / 1.6 "Montserrat";
+            }
+        }
+
+        &__cons {
+            gap: 10px;
+            font-size: 14px;
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+
+        &__image {
+            height: 200px;
+
+            &-file {
+                object-fit: contain;
+                margin: 0 -200px 0 0;
+            }
+        }
+
+        &__advantages {
+            gap: 30px;
+            padding: 30px 15px 0 15px;
+        }
+
+        &__advantage {
+            padding: 0 0 0 85px;
+
+            &-title {
+                font: 700 18px / 1.2 "Montserrat";
+                margin: 0 0 10px 0;
+
+                &::after {
+                    margin: 10px 0 0 0;
+                }
+            }
+
+            &-desc {
+                font: 13px / 1.6 "Montserrat";
+                color: #222;
+            }
+        }
+    }
+}

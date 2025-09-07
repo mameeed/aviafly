@@ -1,0 +1,57 @@
+.tp-popcontact {
+    all: unset;
+    position: fixed;
+    z-index: 8;
+    bottom: 50px;
+    right: 100px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background: $accent;
+    animation: pulse-animation 2s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    will-change: transform;
+
+    &__image {
+        will-change: transform;
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+        transform: translate(-1px, 1px);
+        object-position: center center;
+    }
+
+    &:hover {
+        transform: scale(1.04);
+    }
+    &:active {
+        transform: none;
+    }
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px #1c6be299;
+    }
+    100% {
+        box-shadow: 0 0 0 30px rgba(28, 68, 226, 0);
+    }
+}
+
+@media (max-width: 576px) {
+    .tp-popcontact {
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+
+        &__image {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

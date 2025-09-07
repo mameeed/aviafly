@@ -1,0 +1,257 @@
+.tp-contact {
+    padding: 50px 0;
+    overflow: visible;
+
+    &__content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        // gap: 50px;
+        align-items: flex-start;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+        row-gap: 20px;
+
+        &-title {
+            margin: 0 0 15px;
+            font: 700 40px / 1.1 "Montserrat";
+            color: #222;
+        }
+
+        &-desc {
+            font: 15px / 1.6 "Montserrat";
+            color: #222;
+            margin: 0 0 25px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            &::after {
+                display: block;
+                width: 60px;
+                content: "";
+                background: url("@/assets/images/static/img-decore.png") no-repeat center center/contain;
+                height: 4px;
+                opacity: 0.7;
+            }
+        }
+
+        &-wrapper {
+            padding: 0 50px 0 0;
+            position: sticky;
+            top: 140px;
+        }
+    }
+
+    &__faq {
+        &-title {
+            margin: 0 0 15px;
+            font: 700 40px / 1.1 "Montserrat";
+            color: #222;
+            margin: 0 0 25px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            &::after {
+                display: block;
+                width: 60px;
+                content: "";
+                background: url("@/assets/images/static/img-decore.png") no-repeat center center/contain;
+                height: 4px;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .tp-faq {
+        margin: 0 0 15px;
+        max-height: 80px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+
+        &__toggler {
+            width: 100%;
+            height: 80px;
+            background-color: #f4f4f4;
+            flex-shrink: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 20px 70px;
+            line-height: 1.4;
+            @include limitLine(2);
+            cursor: pointer;
+            transition: 0.3s;
+
+            &-num {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 60px;
+                height: 100%;
+                padding-left: 12px;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                line-height: 58px;
+                color: #aaa;
+                background-color: #ededed;
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+                -webkit-clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+                clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+            }
+
+            &-label {
+                position: relative;
+                font-size: 15px;
+                font-weight: 500;
+                color: #555555;
+            }
+
+            &::after {
+                position: absolute;
+                right: 25px;
+                top: 50%;
+                transform: translateY(-50%) rotate(90deg);
+                width: 20px;
+                height: 20px;
+                display: flex;
+                transition: 0.3s;
+                background: url("@/assets/icons/icon-arrow.svg") no-repeat center center/contain;
+                filter: brightness(0);
+                content: "";
+            }
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+        &__body {
+            flex-grow: 1;
+            overflow: auto;
+            padding: 25px 0 10px 0;
+
+            &-txt {
+                padding-left: 35px;
+                border-left: 3px solid #222;
+                font: 14px / 1.6 "Montserrat";
+            }
+
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        &.tp-active {
+            max-height: 400px;
+
+            .tp-faq__toggler {
+                &-num {
+                    background: #a89233;
+                    color: #fff;
+                }
+
+                &::after {
+                    transform: translateY(-50%) rotate(-90deg);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .tp-contact {
+        &__faq {
+            &-wrapper {
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .tp-contact {
+        &__form {
+            column-gap: 15px;
+            row-gap: 15px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .tp-contact {
+        &__content {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 30px;
+        }
+
+        &__faq,
+        &__form {
+            &-title {
+                align-items: center;
+                text-align: center;
+            }
+
+            &-desc {
+                text-align: center;
+                align-items: center;
+            }
+
+            &-wrapper {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .tp-contact {
+        padding: 0 0 50px 0;
+
+        &__faq {
+            &-title {
+                font: 700 28px / 1.1 "Montserrat";
+            }
+
+            &-desc {
+                font: 14px / 1.6 "Montserrat";
+                width: 100%;
+                gap: 10px;
+            }
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &-title {
+                font: 700 28px / 1.1 "Montserrat";
+            }
+
+            &-desc {
+                font: 14px / 1.6 "Montserrat";
+                width: 100%;
+                gap: 10px;
+            }
+        }
+
+        .tp-faq {
+            &:nth-child(2n + 1) {
+                display: none;
+            }
+        }
+    }
+}

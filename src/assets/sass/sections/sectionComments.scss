@@ -1,0 +1,117 @@
+.tp-comments {
+    background-color: #333;
+    padding: 100px 0 0 0;
+    margin: 0 0 200px 0;
+    overflow: visible;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        h2 {
+            color: #fff;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 120%;
+        }
+        img {
+            width: 65px;
+            height: 4px;
+            object-fit: cover;
+        }
+    }
+    &__swiper {
+        position: absolute;
+        bottom: -50px;
+        max-width: 80%;
+        margin: 0 auto;
+        box-shadow: 0 5px 35px 5px rgba(0, 0, 0, 0.12);
+    }
+    &__slide {
+        padding: 50px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__ava {
+        margin: 0 0 26px 0;
+
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+    }
+    &__text {
+        position: relative;
+        color: #222;
+        font-size: 16px;
+        line-height: 120%;
+        margin: 0 0 40px 0;
+        text-align: center;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            width: 110px;
+            height: 80px;
+            background-image: url("@/assets/images/static/img-quote.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__commentator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            margin: 0 0 5px 0;
+            letter-spacing: 0.45px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #222;
+        }
+        p {
+            font-size: 12px;
+            text-transform: uppercase;
+            line-height: 120%;
+            color: #222;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .tp-comments {
+        padding: 50px 0 0 0;
+        margin: 0 0 150px 0;
+
+        &__header {
+            h2 {
+                font: 700 28px / 1.1 "Montserrat";
+            }
+        }
+
+        &__swiper {
+            max-width: 95%;
+        }
+
+        &__text {
+            font: 14px / 1.4 "Montserrat";
+        }
+
+        &__slide {
+            padding: 30px;
+        }
+    }
+}

@@ -1,0 +1,192 @@
+.main-footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+    gap: 30px;
+}
+
+.footer-column img {
+    width: 200px;
+    margin: 0 auto 15px auto;
+}
+.footer-column {
+    width: 70%;
+}
+
+.footer-column:nth-child(2) {
+    justify-content: center;
+    justify-self: center;
+}
+.footer-column:last-of-type {
+    justify-self: flex-end;
+}
+
+.main-footer {
+    background: #062f81;
+    padding: 100px 0 0 0;
+}
+
+.main-footer .widgets-section .footer-widget h4 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    /* text-transform: uppercase; */
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.main-footer .widgets-section .footer-widget p,
+.main-footer .widgets-section .footer-widget a {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #d6d6d6;
+}
+
+.main-footer .widgets-section .footer-widget a {
+    margin-bottom: 24px;
+}
+
+.main-footer .widgets-section .footer-widget a:hover {
+    font-weight: 400;
+    color: #fff;
+}
+
+.main-footer .widgets-section .about-widget .contact-info-list a {
+    font-weight: 600;
+}
+
+.main-footer .widgets-section .about-widget .contact-info-list a svg.iconify {
+    margin-right: 10px;
+}
+
+.main-footer .widgets-section .about-widget .contact-info-list a:hover {
+    font-weight: 600;
+    color: #fff;
+}
+
+.main-footer .widgets-section .newsletter-widget .form-group {
+    position: relative;
+    margin-top: 25px;
+}
+
+.main-footer .widgets-section .newsletter-widget .form-group ::placeholder {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
+    color: #dbdbdb;
+}
+
+.main-footer .widgets-section .newsletter-widget .form-group input {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #b6b6b6;
+    padding: 10px;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+}
+
+.main-footer .widgets-section .newsletter-widget .form-group a {
+    position: absolute;
+    right: 0;
+    top: -8px;
+    font-size: 16px;
+    color: #f2f2f2;
+    margin-bottom: 0;
+}
+
+.main-footer .footer-bottom {
+    font-size: 16px;
+    margin: 20px 0 0 0;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #dbdbdb;
+    padding: 37px 0;
+    border-top: 1px solid #ffffff1c;
+}
+
+.main-footer .footer-bottom a {
+    font-weight: 500;
+    color: #fff;
+}
+
+.main-footer .footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/*** 
+  
+  ====================================================================
+    Responsive Main Footer Style
+  ====================================================================
+  
+   ***/
+
+@media screen and (max-width: 768px) {
+    .main-footer .widgets-section {
+        padding-bottom: 66px;
+    }
+
+    .main-footer .widgets-section .footer-column {
+        margin-bottom: 60px;
+    }
+
+    .main-footer .widgets-section .footer-column .footer-widget.links-widget {
+        padding-left: 0;
+    }
+}
+
+/* overide */
+.modal-dialog {
+    max-width: 800px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+    .main-footer {
+        padding: 50px 0 0 0;
+    }
+    .main-footer .widgets-section {
+        padding: 0;
+    }
+    .main-footer .widgets-section .footer-widget p,
+    .main-footer .widgets-section .footer-widget a {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 5px !important;
+        text-align: center;
+    }
+    .main-footer ul {
+        margin: 20px 0 0 0;
+    }
+    .main-footer li {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    .footer-column {
+        width: 100%;
+        padding: 0;
+        margin: 0 !important;
+    }
+
+    .main-footer .footer-bottom {
+        font-size: 14px;
+        /* margin: 20px 0 0 0; */
+        line-height: 1.4;
+        letter-spacing: 0;
+        padding: 25px 15px;
+    }
+}

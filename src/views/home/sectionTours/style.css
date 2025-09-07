@@ -1,0 +1,163 @@
+.thetours .title {
+    width: 50%;
+    color: #292929;
+    font-size: 14px;
+    line-height: 1.4;
+    width: 40%;
+    margin: 0 0 20px 0;
+}
+
+.thetours h1 {
+    color: #0054f9;
+}
+
+.thetours {
+    /* background: #f8f8f8; */
+    padding: 100px 0;
+    position: relative;
+}
+
+.thetours__list {
+    display: grid;
+    gap: 30px;
+    margin: 50px 0 0 0;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.thetourcard {
+    background: #fff;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    /* overflow: hidden; */
+    /* border-radius: 25px; */
+}
+
+.thetourcard__content-btn {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    will-change: max-height;
+    order: 4;
+}
+.thetourcard__content .price {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    order: 3;
+}
+.thetourcard__content .price span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.thetourcard__content .desc {
+    order: 2;
+    font-size: 14px;
+    width: 100%;
+    transition: 0.5s;
+    will-change: max-height;
+    color: rgba(255, 255, 255, 0.7);
+    max-height: 0;
+    overflow: hidden;
+}
+.thetourcard__content h3 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 24px;
+    order: 1;
+}
+.thetourcard:hover .thetourcard__content {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.thetourcard__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 2;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    /* backdrop-filter: blur(1px); */
+    transition: 0.3s;
+    /* opacity: 0; */
+    /* transform: translateY(10px); */
+}
+.thetourcard > img {
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* position: absolute;
+    left: 0;
+    right: 0;
+    top: -150px;
+    width: 100%;
+    object-fit: cover; */
+}
+
+.thetourcard:hover .thetourcard__content {
+    background: rgba(0, 0, 0, 0.4);
+}
+.thetourcard:hover .thetourcard__content .desc,
+.thetourcard:hover .thetourcard__content-btn {
+    max-height: 200px;
+}
+
+@media (max-width: 992px) {
+    .thetours__list {
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .thetourcard {
+        height: auto;
+        aspect-ratio: 3 / 4;
+    }
+}
+
+@media (max-width: 576px) {
+    .thetours {
+        padding: 40px 0;
+    }
+    .thetours .title {
+        width: 100%;
+    }
+    .thetours__list {
+        margin: 10px 0 0 0;
+    }
+    .thetourcard__content {
+        padding: 15px;
+    }
+
+    .thetourcard__content .price {
+        font-size: 14px;
+    }
+    .thetourcard__content .price span {
+        font-size: 16px;
+    }
+    .thetourcard__content button {
+        padding: 5px 15px;
+        font-size: 12px;
+        height: 40px;
+    }
+    .thetourcard__content .desc {
+        font-size: 12px;
+        display: none;
+    }
+    .thetourcard__content h3 {
+        color: #fff;
+        font-weight: 900;
+        font-size: 18px;
+        order: 1;
+    }
+}

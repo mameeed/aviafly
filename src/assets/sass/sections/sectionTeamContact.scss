@@ -1,0 +1,83 @@
+.tp-teampage-contact {
+    padding: 50px 0;
+
+    &__content {
+        display: grid;
+        grid-template-columns: 35% 50%;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    &__titling {
+        &-title {
+            margin: 0 0 15px;
+            font: 700 40px / 1.1 "Montserrat";
+            color: #222;
+        }
+
+        &-desc {
+            font: 15px / 1.6 "Montserrat";
+            color: #222;
+            margin: 0 0 25px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            &::after {
+                display: block;
+                width: 60px;
+                content: "";
+                background: url("@/assets/images/static/img-decore.png") no-repeat center center/contain;
+                height: 4px;
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .tp-teampage-contact {
+        &__titling {
+            &-title {
+                font: 700 32px / 1.1 "Montserrat";
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .tp-teampage-contact {
+        &__content {
+            display: flex;
+            gap: 0;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .tp-teampage-contact {
+        padding: 0 0 50px 0;
+
+        &__titling {
+            &-title {
+                margin: 0 0 10px;
+                text-align: center;
+                font: 700 28px / 1.1 "Montserrat";
+            }
+
+            &-desc {
+                gap: 15px;
+                text-align: center;
+                font: 14px / 1.6 "Montserrat";
+                align-items: center;
+            }
+        }
+
+        &__content {
+            display: flex;
+            gap: 0;
+            flex-direction: column;
+        }
+    }
+}

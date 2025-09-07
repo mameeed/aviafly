@@ -1,0 +1,144 @@
+.tp-ctpage-main {
+    &__content {
+        display: grid;
+        align-items: flex-start;
+        grid-template-columns: 40% 60%;
+        padding: 50px 20px;
+    }
+
+    &__info {
+        width: 100%;
+        padding: 0 50px 0 0;
+
+        &-title {
+            font: 700 30px / 1.1 "Montserrat";
+            color: #222;
+        }
+
+        &-desc {
+            font: 14px / 1.6 "Montserrat";
+            color: #222;
+            margin: 0 0 25px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .tp-ctblock {
+            margin: 0 0 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+
+            &__title {
+                font: 700 18px / 1.1 "Montserrat";
+                margin: 0 0 5px 0;
+                color: #999;
+            }
+
+            &__link {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin: 0 0 3px 0;
+
+                &-icon {
+                    width: 15px;
+                    height: 15px;
+                    display: flex;
+                    object-fit: contain;
+                    opacity: 0.7;
+                }
+
+                &-label {
+                    font: 600 12px / 1.1 "Montserrat";
+                }
+
+                &-text {
+                    font: 400 12px / 1.1 "Montserrat";
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    .tp-ctblock__link-text {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+
+    &__map {
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+
+        &-iframe {
+            width: 100%;
+            outline: none;
+            display: flex;
+            aspect-ratio: 3 / 2;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .tp-ctpage-main {
+        &__content {
+            grid-template-columns: 50% 50%;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .tp-ctpage-main {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__info {
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .tp-ctpage-main {
+        padding: 20px 0 50px 0;
+
+        &__info {
+            padding: 0;
+
+            .tp-ctblock {
+                &__title {
+                    font: 700 16px / 1.1 "Montserrat";
+                }
+
+                &__link {
+                    &-label {
+                        white-space: nowrap;
+                    }
+                    &-text {
+                        @include limitLine(1);
+                    }
+                }
+            }
+        }
+
+        &__map {
+            padding: 10px;
+
+            iframe {
+                aspect-ratio: 1 /1;
+            }
+        }
+
+        &__content {
+            padding: 0 20px;
+        }
+    }
+}

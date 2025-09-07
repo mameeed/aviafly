@@ -1,0 +1,160 @@
+.tp-leaveapp-mini {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+
+    .tp-inputtext {
+        grid-column: 1 / 3;
+    }
+}
+
+.tp-leaveapp {
+    width: 100%;
+
+    &__desc {
+        font: 15px / 1.6 "Montserrat";
+        color: #999;
+        position: relative;
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        z-index: 1;
+        margin: 0 0 10px 0;
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+
+        &-btn {
+            align-self: flex-end;
+
+            &.tp-disabled {
+                opacity: 0.4;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__state {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: calc(100% + 40px);
+        height: calc(100% + 40px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        background: #fff;
+        z-index: 2;
+        transition: 0.6s;
+        visibility: hidden;
+        opacity: 0;
+
+        &-img {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            object-fit: contain;
+            filter: hue-rotate(233deg);
+        }
+
+        &-text {
+            font: 400 16px / 1.6 "Montserrat";
+            text-align: center;
+            color: #222;
+        }
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .tp-leaveapp {
+        &__desc {
+            font: 14px / 1.6 "Montserrat";
+        }
+
+        &__state {
+            &-text {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .tp-leaveapp-mini {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tp-leaveapp {
+        &__desc {
+            font: 12px / 1.4 "Montserrat";
+            margin: 0;
+            gap: 10px;
+        }
+
+        &__form {
+            gap: 10px;
+            padding: 15px 0;
+
+            &-input {
+                padding: 10px 20px;
+                height: 50px;
+                font-size: 14px;
+
+                &.tp-inputtext {
+                    min-height: 120px;
+                    max-height: 300px;
+                }
+
+                &:focus {
+                    background: #fff;
+                }
+            }
+
+            &-btn {
+                align-self: flex-end;
+                border-radius: 5px;
+
+                &.tp-disabled {
+                    opacity: 0.4;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        &__state {
+            gap: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            &-img {
+                width: 250px;
+                height: auto;
+            }
+
+            &-text {
+                font: 400 14px/1.4 "Montserrat";
+            }
+        }
+    }
+}

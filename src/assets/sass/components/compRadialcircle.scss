@@ -1,0 +1,57 @@
+.tp-circle {
+    --perc: 0;
+
+    &__wrap {
+        width: 150px;
+        height: 150px;
+        background: #fefcff;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    &__mask {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        border-radius: 50%;
+        clip: rect(0px, 150px, 150px, 75px);
+    }
+
+    &__fill {
+        clip: rect(0px, 75px, 150px, 0px);
+        background-color: $accent;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        border-radius: 50%;
+        transform: rotate(calc(var(--perc) * 1.8deg));
+    }
+
+    &__inner {
+        width: 122px;
+        height: 122px;
+        border-radius: 50%;
+        background: #fff8dc;
+        line-height: 122px;
+        text-align: center;
+        margin: 14px;
+        color: $accent;
+        position: absolute;
+        z-index: 2;
+        font-weight: 700;
+        font-size: 28px;
+    }
+
+    &__mask.full {
+        animation: fill ease-in-out 3s forwards;
+    }
+
+    @keyframes fill {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(calc(var(--perc) * 1.8deg));
+        }
+    }
+}

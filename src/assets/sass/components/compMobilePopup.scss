@@ -1,0 +1,44 @@
+.tp-popup {
+    position: fixed;
+    z-index: 13;
+    padding: 50px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            line-height: 140%;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 20px 0;
+        }
+        p {
+            text-align: center;
+            font-size: 16px;
+            line-height: 140%;
+            color: #fff;
+            margin: 0 0 20px 0;
+        }
+    }
+}
+// @media only screen and (max-width: 1200px) {
+//     .tp-popup {
+//         display: flex;
+//     }
+//     body {
+//         overflow: hidden;
+//     }
+// }
